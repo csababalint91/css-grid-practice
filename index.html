@@ -4,28 +4,47 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-	<style>
-		
+	<!-- Write your comments here -->
+	<style>	
 		.container {
+			height: 100%;
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: 50px 50px;
 			grid-gap: 3px;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: 40px auto 40px;
+			grid-template-areas: 
+				"m h h h h h h h h h h h"
+				"m c c c c c c c c c c c"
+				"m f f f f f f f f f f f";
 		}
 
+		.header {
+			grid-area: h;
+			
+		}
+		
+		.menu{
+			grid-area: m;
+		}
+		
+		.content{
+			grid-area: c;
+		}
 
+		.footer{
+			grid-area: f;
+		}
+	
 	</style>
     <title>Css grid</title>
   </head>
   <body>
 
   	<div class="container">
-	  <div>1</div>
-	  <div>2</div>
-	  <div>3</div>
-	  <div>4</div>
-	  <div>5</div>
-	  <div>6</div>
+	  <div class="header">HEADER</div>
+	  <div class="menu">MENU</div>
+	  <div class="content">CONTENT</div>
+	  <div class="footer">FOLDER</div>
 	</div>
 
 
